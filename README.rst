@@ -1,6 +1,10 @@
 ==================================
 Django support for Sublime Text 2/3
 ==================================
+
+.. image:: https://badges.gitter.im/Join%20Chat.svg
+   :alt: Join the chat at https://gitter.im/squ1b3r/Djaneiro
+   :target: https://gitter.im/squ1b3r/Djaneiro?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 Overview
 --------
 
@@ -10,7 +14,7 @@ Installation
 1. Clone this repo
 2. Put the contents of this repo directly inside:
 
- - OS X: ~/Library/Application Support/Sublime Text 2/Packages/
+ - OS X: ~/Library/Application\\ Support/Sublime\\ Text\\ 2/Packages
  - Windows: %APPDATA%/Sublime Text 2/Packages/
  - Linux: ~/.config/sublime-text-2/Packages
 
@@ -50,6 +54,7 @@ Snippets for Django templates
  static          ``{% static %}``
  templatetag     ``{% templatetag %}``
  url             ``{% url %}``
+ verbatim        ``{% verbatim %} {% endverbatim %}``
  widthratio      ``{% widthratio %}``
  with            ``{% with as %} {% endwith %}``
  trans           ``{% trans %}``
@@ -145,12 +150,38 @@ Snippets for Django Views
 =================== ======================================================
  view               ``Function Based View``
  createview         ``Generic Create View``
+ updateview         ``Generic Update View``
  deleteview         ``Generic Delete View``
  detailview         ``Generic Detail View``
  listview           ``Generic List View``
  templateview       ``Generic Template View``
+ adminview          ``Generic Admin View``
+ tabularinline      ``Tabular Inline View``
+ stackedinline      ``Stacked Inline View``
  dispatch           ``dispatch method for CBVs``
  get_context_data   ``get_context_data method for CBVs``
+=================== ======================================================
+
+Snippets for Django Models
+--------------------------------
+=================== ======================================================
+ Abbreviation                        Tag
+=================== ======================================================
+ Model              ``Simple Model Class``
+ Model_full         ``Full Model Class(with TODOs)``
+=================== ======================================================
+
+Snippets for Python
+--------------------------------
+=================== ======================================================
+ Abbreviation                        Tag
+=================== ======================================================
+ __init__           ``__init__(self, *args, **kwargs)``
+ pdb                ``import pdb ; pdb.set_trace()``
+ ipdb               ``import ipdb ; ipdb.set_trace()``
+ npdb               ``from nose.tools import set_trace; set_trace()``
+ traceback          ``import traceback; traceback.print_exc();``
+ utfc               ``coding: utf-8 ``
 =================== ======================================================
 
 Completions
