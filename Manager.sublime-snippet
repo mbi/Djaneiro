@@ -2,8 +2,8 @@
 <snippet>
     <content><![CDATA[
 class $1Manager(models.Manager):
-    def get_query_set(self, *args, **kwargs):
-        return super($1Manager, self).get_query_set(*args, **kwargs)${2:.filter(status=1)}
+    def get_queryset(self, *args, **kwargs):
+        return super($1Manager, self).get_queryset(*args, **kwargs)${2:.filter(status=1)}
 ]]></content>
     <tabTrigger>manager</tabTrigger>
     <scope>source.python</scope>
