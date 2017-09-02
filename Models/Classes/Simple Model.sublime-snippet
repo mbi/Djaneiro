@@ -8,9 +8,9 @@ class ${1:MODELNAME}(models.Model):
         # verbose_name = _('$1')
         # verbose_name_plural = _('$1s')
 
-    objects = models.Manager()
+    # objects = models.Manager()
 
-    def __unicode__(self):
+    def __str__(self):
         return u'$1'
     ]]></content>
     <tabTrigger>model</tabTrigger>
