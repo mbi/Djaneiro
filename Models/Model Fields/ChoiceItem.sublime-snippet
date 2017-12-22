@@ -1,0 +1,7 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[${1:choice_name} = ChoiceItem($2, _('${3:Choice description}'))$4]]></content>
+	<tabTrigger>ci</tabTrigger>
+    <scope>source.python</scope>
+    <description>ChoiceItem (ci)</description>
+</snippet>
