@@ -4,6 +4,6 @@
 {% if $1 %}$2{% else %}$3{% endif %}
 ]]>	</content>
     <tabTrigger>ifelse</tabTrigger>
-    <scope>text.html.django</scope>
+    <scope>text.html.django -entity</scope>
     <description>if... else...</description>
 </snippet>

@@ -1,4 +1,4 @@
-# Django support for Sublime Text 2/3
+# Django support for Sublime Text
 
 [![Join the chat at https://gitter.im/squ1b3r/Djaneiro](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/squ1b3r/Djaneiro?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -9,6 +9,26 @@ Using [Package Control](https://packagecontrol.io/installation):
 - Open the Command Pallete (`ctrl+shift+P` or `cmd+shift+P`).
 - Type “Install Package” and hit return.
 - Type “Djaneiro” and hit return.
+
+Use `HTML (Django) ST3` if using Sublime 3 or earlier.
+
+## URL autocompletion
+
+Djaneiro features URL autocompletion functionality. By keeping an up-to-date index of
+all named URLs and using tab-completion to quickly lookup available names of views, it
+eliminates all time spent tracking down URL names in `urls.py`.
+
+To use this feature:
+* The django project must be saved as a sublime-project.
+* `./manage.py` needs to be located in one of the folders in the project.
+* The setting `python_interpreter` must be set in your project settings.
+
+The index is loaded when the project is opened, and refreshed anytime a python file containing
+the word `urlpatterns` is saved.
+
+The autocomplete can be triggered within any `{% url %}` template tag, or inside
+the method `reverse(`. The appropriate keyword arguments will be displayed if available.
+
 
 ## Snippets for Django templates
 
@@ -43,6 +63,7 @@ Using [Package Control](https://packagecontrol.io/installation):
 | static         | ``{% static %}``                                 |
 | templatetag    | ``{% templatetag %}``                            |
 | url            | ``{% url %}``                                    |
+| aurl           | ``<a href="{% url '' %}></a>``                   |
 | verbatim       | ``{% verbatim %} {% endverbatim %}``             |
 | widthratio     | ``{% widthratio %}``                             |
 | with           | ``{% with as %} {% endwith %}``                  |
@@ -68,9 +89,9 @@ Using [Package Control](https://packagecontrol.io/installation):
 | mauto        | ``models.AutoField()``                  |
 | mbauto       | ``models.BigAutoField()``               |
 | mbigint      | ``models.BigIntegerField()``            |
+| mbin         | ``models.BinaryField()``                |
 | mbool        | ``models.BooleanField()``               |
 | mchar        | ``models.CharField()``                  |
-| mcoseint     | ``models.CommaSeparatedIntegerField()`` |
 | mdate        | ``models.DateField()``                  |
 | mdatetime    | ``models.DateTimeField()``              |
 | mdecimal     | ``models.DecimalField()``               |
@@ -82,19 +103,20 @@ Using [Package Control](https://packagecontrol.io/installation):
 | mgip         | ``models.GenericIPAddressField()``      |
 | mimg         | ``models.ImageField()``                 |
 | mint         | ``models.IntegerField()``               |
-| mip          | ``models.IPAddressField()``             |
-| mnullbool    | ``models.NullBooleanField()``           |
+| mjson        | ``models.JSONField()``                  |
+| mnullbool    | ``models.BooleanField(null=True)``      |
 | mphone       | ``models.PhoneNumberField()``           |
 | mposint      | ``models.PositiveIntegerField()``       |
+| mposbigint   | ``models.PositiveBigIntegerField()``    |
 | mpossmallint | ``models.PositiveSmallIntegerField()``  |
+| msauto       | ``models.SmallAutoField()``             |
 | mslug        | ``models.SlugField()``                  |
-| msmallint    | ``models.SmallIntegerFiled()``          |
+| msmallint    | ``models.SmallIntegerField()``          |
 | mtext        | ``models.TextField()``                  |
 | mtime        | ``models.TimeField()``                  |
 | murl         | ``models.URLField()``                   |
 | musstate     | ``models.USStateField()``               |
 | muuid        | ``models.UUIDField()``                  |
-| mxml         | ``models.XMLField()``                   |
 | fk           | ``models.ForeignKey()``                 |
 | m2m          | ``models.ManyToManyField()``            |
 | o2o          | ``models.OneToOneField()``              |

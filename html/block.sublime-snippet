@@ -4,6 +4,6 @@
 {% block ${1:blockname} %}$2{% endblock ${1:blockname} %}
 ]]>	</content>
     <tabTrigger>block</tabTrigger>
-    <scope>text.html.django</scope>
+    <scope>text.html.django -entity</scope>
     <description>block</description>
 </snippet>
